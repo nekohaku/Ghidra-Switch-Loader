@@ -24,7 +24,7 @@ jobs:
       - uses: eskatos/gradle-command-action@v2
         with:
           gradle-version: current
-          arguments: -PGHIDRA_INSTALL_DIR=${{ env.GHIDRA_INSTALL_DIR }}
+          arguments: -PGHIDRA_INSTALL_DIR=${{ env.GHIDRA_INSTALL_DIR }} -source 15
       - uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
